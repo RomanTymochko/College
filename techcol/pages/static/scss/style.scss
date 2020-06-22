@@ -1,0 +1,1581 @@
+@import '_values';
+@import '_media-queries';
+
+body{
+	font-size: 12px;
+}
+
+
+
+/*html::-webkit-scrollbar {
+    width: 6px;
+    background-color: black;
+}
+
+html::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 3px;
+    background-color: white;
+}
+
+html::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #ff4757;
+}*/
+
+/*.modal::-webkit-scrollbar {
+    width: 6px;
+    background-color: black;
+}
+
+.modal::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 3px;
+    background-color: white;
+}
+
+.modal::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #ff4757;
+}*/
+
+
+@include respond-below(sm){
+	.long-college-name{
+		display: none;
+	}
+
+	.college-logo{
+		margin: 0;
+		width: 64px;
+		height: 64px;
+	}
+
+	.burger{
+		outline: none;
+		margin-bottom: 10px;
+		text-decoration: none;
+		border:0;
+	}
+
+	.burger:hover{
+		outline: none;
+		border:0;
+		text-decoration: none;
+	}
+
+	.short-college-name{
+		font-family: $Comfortaa;
+		font-size: 2.4em;
+		line-height: 1;
+		color: $text-white;
+		text-decoration: none;
+	}
+
+	.short-college-name:hover{
+		color: $text-white;
+		text-decoration: none;
+	}
+
+	.mobile-header{
+		/*background-color: $block-white;*/
+		background-color: #262626a6;
+		opacity: 0.9;
+		padding-right: 0;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		position: sticky;
+	    top: 0;
+	    z-index: 1020;
+	    text-decoration: none;
+	}
+
+	.mobile-menu-main{
+		position: absolute !important;
+		z-index: 1000;
+		top: 0px;
+		padding: 0 0 2%;
+		font-size: 1.3em;
+		transition: 0.3s;
+		text-decoration: none;
+
+		ul{
+			padding: 10px 20px;
+			background-color: $block-white;
+			border-bottom-left-radius: 25px;
+			border-bottom-right-radius: 25px; 
+			box-shadow: 0px 1px 5px #888888;
+		}
+
+		.active-page{
+			font-size: 1.1em;
+			border-radius: 25px;
+			padding-left: 10px;
+			a{
+				color: $text-red;
+			}
+			.dropdown-item{
+				color: $text-black;
+			}
+
+		}
+		a{
+			font-family: $Roboto;
+			color: $text-black;
+			text-decoration: none;
+		}
+		a:hover{
+			color: $text-red;
+			text-decoration: none;
+		}
+	}
+
+	.mobile-menu-sub{
+		background: $block-white;
+		border-radius: 25px;
+		color: $text-black;
+		font-size: 1em;
+		font-family: $Roboto;
+		a{
+			padding: 5px 20px;
+			color: $text-black;
+			text-decoration: none;
+			white-space: normal; 		
+		}
+		a:hover{
+			color: $text-red;
+			text-decoration: none;	
+		}
+
+	}
+
+	.never-too-late{
+		display: none !important;
+	}
+
+
+	.welcome{
+		display: none !important;
+	}
+
+
+
+
+
+
+
+
+
+	.last-6-news{
+		background-color: $block-white;
+		.big-white{
+			padding:0;
+			margin-top: 4%;
+			margin-bottom: 0;
+			font-size: 3em; 
+			font-family: Comfortaa; 
+			color: $text-black;
+			letter-spacing: -2px; 
+			line-height: 1; 
+			text-align: center;
+		}
+		.underline{
+			height: 4px;
+			border-radius: 2px;
+			background-color: $block-black;
+			width: 3rem;
+			margin: 0 auto 10px auto;
+		}
+		.news-space{
+			padding: 5% 0 8%;
+			.column{
+				width: 100%;
+				.card{
+					margin: 0 0.3rem 0.8rem; 
+					border: 0;
+					/*border: 1px solid $block-black;*/
+					box-shadow: 1px 1px 9px black;
+					.card-body{
+						padding: 10px 15px;
+						.card-title{
+							font-family: $Comfortaa;
+							font-size: 1.5em;
+							color: $text-black;
+							text-decoration: none;
+	
+						}
+						.card-title:hover{
+							color: $text-red;
+							text-decoration: none;
+						}
+						.underline{
+							background-color: $block-red;
+							border-radius: 2px;
+							width: 3rem; 
+							margin: 3px auto 7px 0; 
+							padding: 0;
+						}
+						.date{
+							font-family: $Roboto;
+							font-size: 1em;
+							color: $text-grey;
+						}
+						.card-text{
+							font-family: $Roboto;
+							font-size: 1.2em;
+							color: $text-dark-grey;
+						}
+
+					}
+				}
+			}
+		}
+
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	.blog{
+		background-color: $block-white;
+		padding-top: 1%;
+		padding-bottom: 1%;
+		.post{
+			/*padding: 1% 1% 1%;*/
+			width: 100%;
+				.card{
+					margin: 0 0.3rem 0.8rem; 
+					border: 0;
+					box-shadow: 1px 1px 9px black;
+					.card-body{
+						padding: 10px 15px;
+						.card-title{
+							font-family: $Comfortaa;
+							font-size: 1.5em;
+							color: $text-black;
+							text-decoration: none;
+	
+						}
+						.card-title:hover{
+							color: $text-red;
+							text-decoration: none;
+						}
+						.underline{
+							background-color: $block-red;
+							border-radius: 2px;
+							height: 4px;
+							width: 3rem; 
+							margin: 3px auto 7px 0; 
+							padding: 0;
+						}
+						.date{
+							font-family: $Roboto;
+							font-size: 1em;
+							color: $text-grey;
+						}
+						.card-text{
+							font-family: $Roboto;
+							font-size: 1.2em;
+							color: $text-dark-grey;
+							img{
+								width: 100%;
+							}
+						}
+
+					}
+				}
+			}
+	}
+
+
+	.modal{
+		.modal-dialog{
+			.modal-content{
+				.mod-flex{
+					.card{
+						border: 0;
+						.card-body{
+							padding: 10px 13px;
+							.card-title{
+								font-family: $Comfortaa;
+								font-size: 1.5em;
+								color: $text-black;
+								text-decoration: none;
+								margin-bottom: 0;
+							}
+							.card-title:hover{
+								color: $text-black;
+								text-decoration: none;	
+							}
+							.underline{
+								background-color: $block-red;
+								border-radius: 2px;
+								width: 3rem; 
+								height: 4px;
+								margin: 3px auto 7px 0; 
+								padding: 0;
+							}
+							.date{
+								font-family: $Roboto;
+								font-size: 1em;
+								color: $text-grey;
+							}
+							.card-text{
+								font-family: $Roboto;
+								font-size: 1.2em;
+								color: $text-dark-grey;
+								img{
+									width: 100%;
+								}
+							}
+
+						}
+					}
+				}
+
+			}
+		}
+	}
+
+
+
+.share {
+		width: 100%;
+		margin: 0 auto;
+		text-align: center;
+		a{
+			width: 40px;
+			height: 40px;
+			display: inline-block;
+			margin: 1px;
+			border-radius: 50%;
+			font-size: 24px;
+			color: #fff;
+			opacity: 0.75;
+			transition: opacity 0.15s linear;
+			transition: 0.3s;
+			box-shadow: 0px 5px 10px #888888;
+		}
+
+		a:hover {
+			opacity: 1;
+			transition: 0.3s;
+			box-shadow: 0px 7px 10px #888888;
+		}
+
+		/* icons */
+
+		i {
+			position: relative;
+			top: 35%;
+			transform: translateY(-50%);
+		}
+		.facebook {
+			background: #3b5998;
+		}
+
+		.twitter {
+			background: #55acee;
+		}
+
+		.telegram {
+			background: #0088cc;
+		}
+
+		.viber {
+			background: #665CAC;
+		}
+
+		.googleplus {
+			background: #dd4b39;
+		}
+
+		.linkedin {
+			background: #0077b5;
+		}
+
+		.pinterest {
+			background: #cb2027;
+		}
+
+		.btn{
+			outline: none;
+			border: 0;
+			padding: 0.3em 0 0;
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	.news-letter{
+		background-color: $block-red;
+
+		.big-white{
+			padding:0;
+			margin-top: 8%;
+			margin-bottom: 0;
+			font-size: 3em; 
+			font-family: Comfortaa; 
+			color: $text-white;
+			letter-spacing: -2px; 
+			line-height: 1; 
+			text-align: center;
+		}
+		.underline{
+			height: 4px;
+			border-radius: 2px;
+			background-color: $block-white;
+			width: 3rem;
+			margin: 0 auto 10px auto;
+		}
+
+
+		.newsletter-form{
+			margin: 4% 0 8%;
+			::placeholder { /* Firefox, Chrome, Opera */ 
+			    color: $text-white; 
+			} 
+			.email-input{
+				width: 80%;
+				text-overflow: ellipsis;
+				outline: none;
+				border: 1px solid $block-white;
+				border-radius: 35px;
+				text-align: center;
+				color: $text-white;
+				font-size: 1.2em;
+				font-family: $Roboto;
+				padding: 1.5% 4%;
+				margin-bottom: 20px;
+				background-color: $block-red;
+			}
+
+			input[type=submit] {
+				width: 80%;
+			    text-overflow: ellipsis;
+				outline: none;
+				color: $text-red;
+				background-color: $block-white;
+				border: 1px solid $block-white;
+				border-radius: 35px;
+				font-size: 1.2em;
+				font-family: $Roboto;
+				padding: 1.5% 4%;
+				transition: 0.3s;
+			}
+
+			input[type=submit]:hover {
+				width: 80%;
+				outline: none;
+				color: $text-white;
+				background-color: $block-red;
+				border: 1px solid $block-white;
+				transition: 0.3s;
+			}
+		}		
+	}
+
+
+
+
+
+
+
+
+	.contuct-us-full{
+		background-color: $block-white;
+
+		.big-black{
+			padding:0 10px;
+			margin-top: 8%;
+			margin-bottom: 0;
+			font-size: 3em; 
+			font-family: Comfortaa; 
+			color: $text-black;
+			letter-spacing: -2px; 
+			line-height: 1; 
+			text-align: center;
+		}
+		.underline{
+			height: 4px;
+			border-radius: 2px;
+			background-color: $block-red;
+			width: 3rem;
+			margin: 0 auto 10px auto;
+		}
+		.contuct-form{
+			margin: 4% 0 8%;
+			::placeholder { /* Firefox, Chrome, Opera */ 
+			    color: $text-grey; 
+			    text-align: left;
+			} 
+			input{
+				width: 90%;
+
+				text-overflow: ellipsis;
+				outline: none;
+				border: 2px solid $border-grey;
+				border-radius: 35px;
+				color: $text-grey;
+				font-size: 1.2em;
+				font-family: $Roboto;
+				padding: 10px 20px;
+				margin-bottom: 10px;
+			}
+
+			textarea{
+				width: 90%;
+				text-overflow: ellipsis;
+				outline: none;
+				border: 2px solid $border-grey;
+				border-radius: 25px;
+				color: $text-grey;
+				font-size: 1.2em;
+				font-family: $Roboto;
+				padding: 20px 20px;
+				margin-bottom: 15px;
+				transition: 0.3s;
+			    resize: none;
+			    height: 240px;
+			}
+
+			input[type=submit] {
+				width: 40%;
+			    text-overflow: ellipsis;
+				outline: none;
+				color: $text-white;
+				background-color: $button-red;
+				border: 0;
+				/*border: 2px solid $block-white;*/
+				border-radius: 35px;
+				font-size: 1.2em;
+				font-family: $Roboto;
+				padding: 10px 0;
+				transition: 0.3s;
+			}
+
+			input[type=submit]:hover {
+				width: 40%;
+				outline: none;
+				color: $text-white;
+				background-color: $button-black;
+				border: 0;
+				/*border: 2px solid $block-white;*/
+				transition: 0.3s;
+			}
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+	.contact-us{
+		background-color: $block-white;
+		/*height: 80vh;*/
+
+		.big-black{
+			padding:0 5px;
+			margin-top: 8%;
+			margin-bottom: 0;
+			font-size: 3em; 
+			font-family: Comfortaa; 
+			color: $text-black;
+			letter-spacing: -2px; 
+			line-height: 1; 
+			text-align: center;
+		}
+		.underline{
+			height: 4px;
+			border-radius: 2px;
+			background-color: $block-red;
+			width: 3rem;
+			margin: 0 auto 10px auto;
+		}
+
+		.address{
+			width: 100%;
+			margin-top: 5%;
+			margin-bottom: 8%;
+			word-wrap: normal;
+			img{
+				margin-bottom: 10px;
+			}
+			p{
+				text-align: center;
+				font-family: $Roboto;
+				font-size: 1.1em;
+				color: $text-grey;
+				margin: 0;
+				text-align: center;
+				padding-right: 5px;
+				padding-left: 5px;
+			}
+		}
+
+		.phone{
+			width: 100%;
+			margin-top: 5%;
+			margin-bottom: 8%;
+			img{
+				margin-bottom: 10px;
+			}
+			p{
+				text-align: center;
+				font-family: $Roboto;
+				font-size: 1.1em;
+				color: $text-grey;
+				margin: 0;
+				text-align: center;
+			}
+		}
+
+		.mail{
+			width: 100%;
+			margin-top: 5%;
+			margin-bottom: 8%;
+			img{
+				margin-bottom: 10px;
+			}
+			p{
+				text-align: center;
+				font-family: $Roboto;
+				font-size: 1.1em;
+				color: $text-grey;
+				margin: 0;
+				text-align: center;
+			}
+		}	
+	}
+
+	.copyright{
+		background-color: white; 
+		height: 13vh;
+		border-top: 1px solid $border-grey;
+		p{
+			padding-left: 10px;
+			padding-right: 10px;
+			text-align: center;
+			font-family: $Roboto;
+			font-size: 1em;
+			color: $text-grey;
+			margin: 0;
+		}
+	}
+
+}
+
+@include respond-below(xs){
+	.college-logo{ 
+		display: none;
+	}
+
+	.burger{
+		margin-bottom: 0px;
+	}
+
+	.short-college-name{
+		font-size: 1.9em;
+		line-height: 1;
+		color: $text-white;
+		text-decoration: none;
+	}
+}
+
+
+/*@include respond-between(xs,sm){
+
+}*/
+
+@include respond-above(sm){
+
+	.short-college-name{
+		display: none;
+	}
+
+	.mobile-header{
+		padding-top: 50px;
+		padding-bottom: 20px;
+	}
+
+	.college-logo{
+		margin: 0 3% 0 7%;
+		width: 100px;
+		height: 100px;
+	}
+
+	.long-college-name{
+		font-family: $Comfortaa;
+		font-size: 2.5em;
+		line-height: 1;
+		color: $text-white;
+		text-decoration: none;
+	}
+
+	.long-college-name:hover{
+		color: $text-white;
+		text-decoration: none;
+	}
+
+	.menu-line{
+		height: 1px;
+		background-color: $block-white;
+		width: 80%;
+		opacity: 0.4;
+		margin: 0 auto 10px auto;
+	}
+
+	ul{
+		font-size: 1.1em;
+		letter-spacing: -1px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+
+		.menu-item{
+			background-color: transparent;
+			margin: 0 0.3%;
+			padding: 5px 10px;
+			border-radius: 20px;
+			transition: 0.3s;
+			a{
+				font-family: $Roboto;
+				color: $text-white;
+				text-decoration: none;
+			}
+		}
+
+		.active-page{
+			background: #ff4754;
+		}
+
+		.menu-item:hover{
+			background: #ff4754;
+			border-radius: 20px;
+			background: #ff4754;
+			transition: 0.3s;
+			a{
+				background: none;
+				/*color: white;*/
+				text-decoration: none;
+			}
+		}
+
+		.deck-menu-sub{
+			background: $block-white;
+			border-radius: 25px;
+			color: $text-black;
+			font-size: 1em;
+			font-family: $Roboto;
+
+			a{
+				color: $text-black;
+				text-decoration: none;	
+			}
+			a:hover{
+				color: $text-red;
+				text-decoration: none;	
+			}
+		}
+	}
+	.never-too-late{
+		height: 80vh;
+		.big{
+			font-size: 5em; 
+			font-family: Comfortaa; 
+			letter-spacing: -2px; 
+			color: white; 
+			line-height: 1; 
+			text-align: center;
+			text-shadow: 1px 2px 6px #000000;
+		}
+		.small{
+			font-size: 1.5em; 
+			font-family: $Roboto; 
+			color: white; 
+			line-height: 1; 
+			text-align: center;	
+		}
+		.read-more{
+			margin-top: 5%;
+			color: $text-white;
+			font-size: 1.2em;
+			font-family: $Roboto;
+			padding: 1.5% 4%;
+			border: 2px solid white;
+			border-radius: 35px;
+			text-decoration: none;
+			transition: 0.3s;
+		}
+		.read-more:hover{
+			border: 2px solid $block-red;
+			background-color: $button-red;
+			text-decoration: none;
+			transition: 0.3s;
+		}	
+	}
+
+	.welcome{
+		background-color: $block-white;
+		/*height: 80vh;*/
+
+		.big-black{
+			padding:0;
+			margin-top: 4%;
+			margin-bottom: 0;
+			font-size: 6em; 
+			font-family: Comfortaa; 
+			color: $text-black;
+			letter-spacing: -2px; 
+			line-height: 1; 
+			text-align: center;
+		}
+		.underline{
+			height: 4px;
+			border-radius: 2px;
+			background-color: $block-red;
+			width: 5rem;
+			margin: 0 auto 10px auto;
+		}
+		.welcome-text-block{
+			padding: 4% 15px;
+			width: 33%;
+			font-family: $Roboto;
+			font-size: 1.1em;
+			font-weight: 300;
+    		font-style: normal;
+			color: $text-grey;
+			line-height: 1.5;
+		}
+		.read-more{
+			color: $text-white;
+			font-size: 1.2em;
+			font-family: $Roboto;
+			padding: 1.5% 4%;
+			margin-bottom: 4%;
+			background-color: $block-red;
+			border-radius: 35px;
+			text-decoration: none;
+			transition: 0.3s;
+		}
+		.read-more:hover{
+			background-color: $button-black;
+			text-decoration: none;
+			transition: 0.3s;
+		}	
+	}
+
+
+	.news-letter{
+		background-color: $block-red;
+
+		.big-white{
+			padding:0;
+			margin-top: 8%;
+			margin-bottom: 0;
+			font-size: 6em; 
+			font-family: Comfortaa; 
+			color: $text-white;
+			letter-spacing: -2px; 
+			line-height: 1; 
+			text-align: center;
+		}
+		.underline{
+			height: 4px;
+			border-radius: 2px;
+			background-color: $block-white;
+			width: 5rem;
+			margin: 0 auto 10px auto;
+		}
+
+
+		.newsletter-form{
+			margin: 4% 0 8%;
+			::placeholder { /* Firefox, Chrome, Opera */ 
+			    color: $text-white; 
+			} 
+			.email-input{
+				width: 50%;
+				text-overflow: ellipsis;
+				outline: none;
+				border: 2px solid $block-white;
+				border-radius: 35px;
+				text-align: center;
+				color: $text-white;
+				font-size: 1.2em;
+				font-family: $Roboto;
+				padding: 1.5% 4%;
+				margin-bottom: 20px;
+				background-color: $block-red;
+			}
+
+			input[type=submit] {
+				width: 50%;
+			    text-overflow: ellipsis;
+				outline: none;
+				color: $text-red;
+				background-color: $block-white;
+				border: 2px solid $block-white;
+				border-radius: 35px;
+				font-size: 1.2em;
+				font-family: $Roboto;
+				padding: 1.5% 4%;
+				transition: 0.3s;
+			}
+
+			input[type=submit]:hover {
+				width: 50%;
+				outline: none;
+				color: $text-white;
+				background-color: $block-red;
+				border: 2px solid $block-white;
+				transition: 0.3s;
+			}
+		}		
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	.last-6-news{
+		background-color: $block-black;
+		.big-white{
+			padding:0;
+			margin-top: 4%;
+			margin-bottom: 0;
+			font-size: 6em; 
+			font-family: Comfortaa; 
+			color: $text-white;
+			letter-spacing: -2px; 
+			line-height: 1; 
+			text-align: center;
+		}
+		.underline{
+			height: 4px;
+			border-radius: 2px;
+			background-color: $block-white;
+			width: 5rem;
+			margin: 0 auto 10px auto;
+		}
+		.news-space{
+			padding: 5% 5% 8%;
+
+			.column{
+				width: 33.33333%;
+				.card{
+					margin: 5px; 
+					border:0;
+					.card-body{
+						.card-title{
+							font-family: $Comfortaa;
+							font-size: 1.8em;
+							color: $text-black;
+							text-decoration: none;
+	
+						}
+						.card-title:hover{
+							color: $text-red;
+							text-decoration: none;
+						}
+						.underline{
+							background-color: $block-red;
+							border-radius: 2px;
+							width: 5rem; 
+							margin: 5px auto 10px 0; 
+							padding: 0;
+						}
+						.date{
+							font-family: $Roboto;
+							font-size: 1em;
+							color: $text-grey;
+						}
+						.card-text{
+							font-family: $Roboto;
+							font-size: 1.3em;
+							color: $text-dark-grey;
+						}
+
+					}
+				}
+			}
+		}
+
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+	.blog{
+		background-color: $block-white;
+		padding-top: 2%;
+		padding-bottom: 1%;
+		.post{
+			padding: 1% 5% 1%;
+			width: 70%;
+				.card{
+					margin: 5px; 
+					border:0;
+					box-shadow: 1px 1px 12px grey;
+					.card-body{
+						.card-title{
+							font-family: $Comfortaa;
+							font-size: 1.8em;
+							color: $text-black;
+							text-decoration: none;
+	
+						}
+						.card-title:hover{
+							color: $text-red;
+							text-decoration: none;
+						}
+						.underline{
+							background-color: $block-red;
+							border-radius: 2px;
+							width: 5rem; 
+							margin: 5px auto 10px 0; 
+							padding: 0;
+							height: 4px;
+						}
+						.date{
+							font-family: $Roboto;
+							font-size: 1em;
+							color: $text-grey;
+						}
+						.card-text{
+							font-family: $Roboto;
+							font-size: 1.3em;
+							color: $text-dark-grey;
+							img{
+								width: 100%;
+							}
+						}
+
+					}
+				}
+			}
+	}
+
+
+
+	.modal{
+		.modal-dialog{
+			.modal-content{
+				.mod-flex{
+					.card{
+						.card-body{
+
+							.card-title{
+								font-family: $Comfortaa;
+								font-size: 1.8em;
+								color: $text-black;
+								text-decoration: none;
+
+							}
+							.card-title:hover{
+								text-decoration: none;
+								color: $text-black;
+							}
+							.underline{
+								background-color: $block-red;
+								border-radius: 2px;
+								width: 5rem; 
+								margin: 5px auto 10px 0; 
+								padding: 0;
+								height: 4px;
+							}
+							.date{
+								font-family: $Roboto;
+								font-size: 1em;
+								color: $text-grey;
+							}
+							.card-text{
+								font-family: $Roboto;
+								font-size: 1.3em;
+								color: $text-dark-grey;
+								img{
+									width: 100%;
+								}
+
+							}
+
+						}	
+
+					}
+				}
+			}
+		}
+	}
+
+
+	.share {
+		width: 100%;
+		margin: 0 auto;
+		text-align: center;
+		a{
+			width: 50px;
+			height: 50px;
+			display: inline-block;
+			margin: 8px;
+			border-radius: 50%;
+			font-size: 24px;
+			color: #fff;
+			opacity: 0.75;
+			transition: opacity 0.15s linear;
+			transition: 0.3s;
+			box-shadow: 0px 5px 10px #888888;
+		}
+
+		a:hover {
+			opacity: 1;
+			transition: 0.4s;
+			box-shadow: 0px 7px 10px #888888;
+		}
+
+		/* icons */
+
+		i {
+			position: relative;
+			top: 38%;
+			transform: translateY(-50%);
+		}
+		.facebook {
+			background: #3b5998;
+		}
+
+		.twitter {
+			background: #55acee;
+		}
+
+		.telegram {
+			background: #0088cc;
+		}
+
+		.viber {
+			background: #665CAC;
+		}
+
+		.googleplus {
+			background: #dd4b39;
+		}
+
+		.linkedin {
+			background: #0077b5;
+		}
+
+		.pinterest {
+			background: #cb2027;
+		}
+
+		.btn{
+			outline: none;
+			border: 0;
+			padding: 1em;
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	.contuct-us-full{
+		background-color: $block-white;
+
+		.big-black{
+			padding:0;
+			margin-top: 8%;
+			margin-bottom: 0;
+			font-size: 6em; 
+			font-family: Comfortaa; 
+			color: $text-black;
+			letter-spacing: -2px; 
+			line-height: 1; 
+			text-align: center;
+		}
+		.underline{
+			height: 4px;
+			border-radius: 2px;
+			background-color: $block-red;
+			width: 5rem;
+			margin: 0 auto 10px auto;
+		}
+		.contuct-form{
+			margin: 4% 0 8%;
+			::placeholder { /* Firefox, Chrome, Opera */ 
+			    color: $text-grey; 
+			    text-align: left;
+			} 
+			input{
+				width: 80%;
+
+				text-overflow: ellipsis;
+				outline: none;
+				border: 2px solid $border-grey;
+				border-radius: 35px;
+				color: $text-grey;
+				font-size: 1.2em;
+				font-family: $Roboto;
+				padding: 1.5% 2%;
+				margin-bottom: 20px;
+			}
+
+			textarea{
+				width: 80%;
+				text-overflow: ellipsis;
+				outline: none;
+				border: 2px solid $border-grey;
+				border-radius: 35px;
+				color: $text-grey;
+				font-size: 1.2em;
+				font-family: $Roboto;
+				padding: 1.5% 2%;
+				margin-bottom: 20px;
+				transition: 0.3s;
+			    resize: none;
+			    height: 240px;
+			}
+
+			input[type=submit] {
+				width: 20%;
+			    text-overflow: ellipsis;
+				outline: none;
+				color: $text-white;
+				background-color: $button-red;
+				border: 0;
+				/*border: 2px solid $block-white;*/
+				border-radius: 35px;
+				font-size: 1.2em;
+				font-family: $Roboto;
+				padding: 1.5% 4%;
+				transition: 0.3s;
+			}
+
+			input[type=submit]:hover {
+				width: 20%;
+				outline: none;
+				color: $text-white;
+				background-color: $button-black;
+				border: 0;
+				/*border: 2px solid $block-white;*/
+				transition: 0.3s;
+			}
+		}
+	}
+
+	.contact-us{
+		background-color: $block-white;
+		/*height: 80vh;*/
+
+		.big-black{
+			padding:0;
+			margin-top: 8%;
+			margin-bottom: 0;
+			font-size: 6em; 
+			font-family: Comfortaa; 
+			color: $text-black;
+			letter-spacing: -2px; 
+			line-height: 1; 
+			text-align: center;
+		}
+		.underline{
+			height: 4px;
+			border-radius: 2px;
+			background-color: $block-red;
+			width: 5rem;
+			margin: 0 auto 10px auto;
+		}
+
+		.address{
+			width: 30%;
+			margin-top: 4%;
+			margin-bottom: 8%;
+			word-wrap: normal;
+			img{
+				margin-bottom: 40px;
+			}
+			p{
+				text-align: center;
+				font-family: $Roboto;
+				font-size: 1.2em;
+				color: $text-grey;
+				margin: 0;
+				text-align: center;
+			}
+		}
+
+		.phone{
+			width: 30%;
+			margin-top: 4%;
+			margin-bottom: 8%;
+			img{
+				margin-bottom: 40px;
+			}
+			p{
+				text-align: center;
+				font-family: $Roboto;
+				font-size: 1.2em;
+				color: $text-grey;
+				margin: 0;
+				text-align: center;
+			}
+		}
+
+		.mail{
+			width: 30%;
+			margin-top: 4%;
+			margin-bottom: 8%;
+			img{
+				margin-bottom: 40px;
+			}
+			p{
+				text-align: center;
+				font-family: $Roboto;
+				font-size: 1.2em;
+				color: $text-grey;
+				margin: 0;
+				text-align: center;
+			}
+		}	
+	}
+
+	.copyright{
+		background-color: white; 
+		height: 15vh;
+		border-top: 1px solid $border-grey;
+		p{
+			text-align: center;
+			font-family: $Roboto;
+			font-size: 1em;
+			color: $text-grey;
+			margin: 0;
+		}
+	}
+
+
+}
+
+
+@include respond-above(md){
+
+	.long-college-name{
+		font-family: $Comfortaa;
+		letter-spacing: -2px;
+		font-size: 3em;
+		font-weight: 900;
+		color: $text-white;
+		text-decoration: none;
+	}
+
+	.college-logo{
+		margin: 0 2% 0 10%;
+		width: 128px;
+		height: 128px;
+	}
+
+	ul{
+		font-size: 1.4em;
+		.menu-item{
+			margin: 0 0.4%;
+			padding: 5px 15px;
+			border-radius: 25px;
+			transition: 0.3s;
+			a{
+				font-family: $Roboto;
+				color: $text-white;
+				text-decoration: none;
+			}
+		}
+
+		.menu-item:hover{
+			background: #ff4754;
+			border-radius: 25px;
+			background: #ff4754;
+			transition: 0.3s;
+			a{
+				background: none;
+				text-decoration: none;
+			}
+		}
+
+		.deck-menu-sub{
+			background: $block-white;
+			border-radius: 25px;
+			color: $text-black;
+			font-size: 1em;
+			font-family: $Roboto;
+			a{
+				color: $text-black;
+				text-decoration: none;	
+			}
+			a:hover{
+				color: $text-red;
+				text-decoration: none;	
+			}
+		}
+	}
+
+	.never-too-late{
+		height: 100vh;
+		.big{
+			font-size: 7em; 
+		}
+		.small{
+			font-size: 1.6em; 
+			font-family: $Roboto; 
+		}	
+
+	}
+
+	.welcome{
+		/*height: 100vh;*/
+
+		.big-black{
+			font-size: 7em; 
+		}
+		.underline{
+			height: 4px;
+			width: 6rem;
+		}
+		
+		.welcome-text-block{
+			padding: 4% 15px;
+			width: 27%;
+			font-size: 1.2em;
+			font-weight: 300;
+		}
+		.read-more{
+			font-size: 1.2em;
+			padding: 1.5% 4%;
+			border-radius: 35px;
+		}
+	}
+
+	.news-letter{
+
+		.big-white{
+			font-size: 7em; 
+		}
+		.underline{
+			width: 6rem;
+		}
+	}
+
+	.contact-us{
+
+		.big-black{
+			font-size: 7em; 
+		}
+		.underline{
+			height: 4px;
+			width: 6rem;
+		}
+	}
+
+	.copyright{
+		height: 20vh;
+		p{
+			font-size: 1.3em;
+		}
+	}
+
+
+
+
+}
+
+

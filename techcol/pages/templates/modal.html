@@ -1,0 +1,39 @@
+{% load static %}
+<div class="modal fade" id="modal-{{post.id}}" tabindex="-1" role="document" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog  modal-dialog-centered modal-xl">
+    <div class="modal-content">
+      <div class="d-flex flex-column align-items-center justify-content-center mod-flex">
+          <div class="card" style="width:100%">
+              {% if post.main_image %}
+              <img src="/main_images/{{ post.main_image }}" class="card-img-top" alt="...">
+              {% endif %}
+              <div class="card-body">
+                <p class="card-title">{{ post.title }}</p>
+                <div class="underline"></div>
+                <p class="date"><i>{{ post.pub_date }}</i></p>
+                {% if post.description %}
+                  <p class="card-text">{{ post.description | safe }}</p>
+                {% endif %}
+
+              <div class="share">
+
+                <a class="facebook" href="https://www.facebook.com/share.php?u={{url}}&title={{title}}" target="blank"><i class="fab fa-facebook"></i></a>
+
+                <a class="twitter" href="https://twitter.com/intent/tweet?status={{title}}+{{url}}" target="blank"><i class="fab fa-twitter"></i></a>
+
+                <a class="telegram" href="https://twitter.com/intent/tweet?status={{title}}+{{url}}" target="blank"><i class="fab fa-telegram fa-lg"></i></a>
+
+                <a class="viber" href="https://twitter.com/intent/tweet?status={{title}}+{{url}}" target="blank"><i class="fab fa-viber"></i></a>
+
+                <a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url={{url}}&title={{title}}&source={{source}}" target="blank"><i class="fab fa-linkedin"></i></a>
+                <button type="button" class="btn align-items-center" data-dismiss="modal" style="float: right;">
+                  <img src="{% static 'img/x.png' %}" width="24px" height="24px">
+                </button>
+
+              </div>
+              </div>
+            </div>
+          </div>
+    </div>
+  </div>
+</div>

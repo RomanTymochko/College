@@ -1,0 +1,20 @@
+
+<ul class="news-pagination justify-content-center" style="margin:20px 0">
+    {% if posts.has_previous %}
+      <li class="pagination-button">
+          <a class="" href="?page={{ posts.previous_page_number }}" style="align-self: start">
+          П
+          </a>
+      </li>
+    {% endif %}
+
+    <li class="pagination-counter">{{ posts.number }} / {{ posts.paginator.num_pages }}</li>
+
+    {% if posts.has_next %}
+    <li class="pagination-button">
+        <a class="" href="?page={{ posts.next_page_number }}">
+            Н
+        </a>
+    </li>
+    {% endif %}
+</ul>

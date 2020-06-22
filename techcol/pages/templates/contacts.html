@@ -1,0 +1,82 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{% block page_title%}
+    <title>Контакти</title>
+{% endblock%}
+
+{% block contuct_form%}
+<div class="contact-us d-flex flex-column align-items-center justify-content-center order-md-2">
+  <p class="big-black">Контактна інформація</p>
+  <div class="underline"></div>
+  <div class="d-md-inline-flex d-md-flex justify-content-around w-100">
+    <div class="d-flex flex-column address align-items-center ml-auto">
+      <img src="{% static 'img/home_icon.png' %}" height="50px" width="57px">
+      <p>
+        79035, м. Львів, вул. Пимоненка, 17<br>79071, м. Львів, вул. Пулюя, 30 (бічна вул. Наукова)<br>81750, Львівська область, м. Ходорів, вул. Грушевського, 3
+      </p>
+    </div>
+    <div class="d-flex flex-column phone align-items-center">
+      <img src="{% static 'img/phone_icon.png' %}" height="56px" width="34px">
+      <p>
+          270-20-50<br>264-66-61, 265-93-67<br>(3239) 5-32-32, 5-34-61
+      </p>
+    </div>
+     <div class="d-flex flex-column mail align-items-center mr-auto">
+      <img src="{% static 'img/mail_icon.png' %}" height="46px" width="56px">
+      <p>
+          techcol@litech.net
+      </p>
+    </div>
+  </div>
+</div>
+{% endblock%}
+
+
+{% block small_map%}
+<div class="d-flex order-md-1" style="background-color: white; height: 60vh;">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d82385.01269992828!2d23.998466479203426!3d49.81367219999999!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473ae81e9d9e3711%3A0x92715be97cba1512!2z0LLRg9C70LjRhtGPINCc0LjQutC-0LvQuCDQn9C40LzQvtC90LXQvdC60LAsIDE3LCDQm9GM0LLRltCyLCDQm9GM0LLRltCy0YHRjNC60LAg0L7QsdC70LDRgdGC0YwsIDc5MDAw!5e0!3m2!1suk!2sua!4v1520293352994" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+{% endblock%}
+
+
+{% block contact_form%}
+
+  <div class="contuct-us-full d-flex flex-column align-items-center justify-content-center">
+    <p class="big-black">Зв'яжіться з нами</p>
+    <div class="underline"></div>
+
+    <form action="/contuct" class="d-flex flex-column contuct-form w-100 justify-content-center align-items-center">
+      <input type="text" name="name-input" placeholder="Ім'я *" required>
+      <input type="email" name="email-input" class="email-input" placeholder="Введіть Ваш Email *" autocomplete="on" required>
+      <input type="phone" name="phone-input" placeholder="Телефон">
+      <!-- <input type="text" name="message-input" placeholder="Повідомлення" required> -->
+      <textarea name="message-input" placeholder="Повідомлення *"></textarea>
+      <input type="submit" value="Надіслати">
+    </form>
+  </div>
+{% endblock%}
+
+
+{% block contacts_scripts%}
+    <!-- Optional JavaScript -->
+    <script type="text/javascript">
+      document.getElementById("contacts").classList.add("active-page");
+      window.onscroll = function() {scrollFunction()};
+      function scrollFunction() {
+       if (document.body.scrollTop > 205 || document.documentElement.scrollTop > 205) {
+          document.getElementById("menu").style.background="#262626a6";
+          document.getElementById("menu").style.opacity="1";
+          document.getElementById("menu").style.transition="0.8s";
+        } else {
+          document.getElementById("menu").style.background="transparent";
+          document.getElementById("menu").style.opacity="1";
+          document.getElementById("menu").style.transition="0.4s";
+        }
+      }
+    </script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+{% endblock%}

@@ -1,0 +1,106 @@
+{% extends 'base.html'%}
+{% load static %}
+
+
+{% block page_title%}
+    <title>Галерея</title>
+{% endblock%}
+
+
+{% block gallery_items%}
+<div class="justify-content-center align-items-center" style="background-color: white">
+  <div class="container">
+
+
+      {%for post in posts%}
+          {%if post.is_active%}
+              <div class="gallery" id="gal-id-{{ post.id }}">
+                <div class="gallery-data">
+                  <p class="gallery-title">{{ post.title }}</p>
+                  <div class="underline"></div>
+                  <p class="date"><i>{{post.pub_date}}</i></p>
+                </div>
+                {% for img in images %}
+                    {% if img.gallery_id == post.id %}
+                        <a href="/main_images/{{ img.image }}"><img src="/main_images/{{ img.image }}" alt=""/></a>
+                    {% endif %}
+                {% endfor %}
+              <div class="clear"></div>
+            </div>
+          {% endif %}
+       {% endfor%}
+
+  </div>
+</div>
+{% endblock%}
+
+
+{% block gallery_scripts%}
+    <!-- Optional JavaScript -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+  <script type="text/javascript" src="{% static 'js/simple-lightbox.js'%}"></script>
+
+  <script type="text/javascript">
+        var post_id = [];
+
+    for (int i = 1; i<20; i++){
+        post_id[i] = "gal-id-"+i+" a";
+        post_id[i].simpleLightbox();
+    }
+  </script>
+
+  <script>
+    $(function(){
+<!--    var post_id = [];-->
+
+<!--    for (int i = 1; i<20; i++){-->
+<!--        post_id[i] = "gal-id-"+i+" a";-->
+<!--        post_id[i].simpleLightbox();-->
+<!--    }-->
+
+<!--      var $gallery1 = $('#gal-id-1 a').simpleLightbox();-->
+<!--      var $gallery2 = $('#gal-id-2 a').simpleLightbox();-->
+<!--      var $gallery3 = $('#gal-id-3 a').simpleLightbox();-->
+<!--      var $gallery4 = $('#gal-id-4 a').simpleLightbox();-->
+<!--      var $gallery5 = $('#gal-id-5 a').simpleLightbox();-->
+<!--      var $gallery6 = $('#gal-id-6 a').simpleLightbox();-->
+<!--      var $gallery7 = $('#gal-id-7 a').simpleLightbox();-->
+<!--      var $gallery8 = $('#gal-id-8 a').simpleLightbox();-->
+<!--      var $gallery9 = $('#gal-id-9 a').simpleLightbox();-->
+<!--      var $gallery10 = $('#gal-id-10 a').simpleLightbox();-->
+<!--      var $gallery11 = $('#gal-id-11 a').simpleLightbox();-->
+<!--      var $gallery12 = $('#gal-id-12 a').simpleLightbox();-->
+<!--      var $gallery13 = $('#gal-id-13 a').simpleLightbox();-->
+<!--      var $gallery14 = $('#gal-id-14 a').simpleLightbox();-->
+<!--      var $gallery15 = $('#gal-id-15 a').simpleLightbox();-->
+<!--      var $gallery16 = $('#gal-id-16 a').simpleLightbox();-->
+<!--      var $gallery17 = $('#gal-id-17 a').simpleLightbox();-->
+<!--      var $gallery18 = $('#gal-id-18 a').simpleLightbox();-->
+<!--      var $gallery19 = $('#gal-id-19 a').simpleLightbox();-->
+<!--      var $gallery20 = $('#gal-id-20 a').simpleLightbox();-->
+    });
+  </script>
+
+    <script type="text/javascript">
+      document.getElementById("gallery").classList.add("active-page");
+      window.onscroll = function() {scrollFunction()};
+      function scrollFunction() {
+       if (document.body.scrollTop > 205 || document.documentElement.scrollTop > 205) {
+          document.getElementById("menu").style.background="#262626a6";
+          document.getElementById("menu").style.opacity="1";
+          document.getElementById("menu").style.transition="0.8s";
+        } else {
+          document.getElementById("menu").style.background="transparent";
+          document.getElementById("menu").style.opacity="1";
+          document.getElementById("menu").style.transition="0.4s";
+        }
+      }
+    </script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+{% endblock%}

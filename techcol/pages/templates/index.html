@@ -1,0 +1,217 @@
+{% extends 'base.html'%}
+{% load static %}
+
+
+{% block page_title%}
+    <title>Головна</title>
+{% endblock%}
+
+
+{% block never_too_late%}
+<div class="d-flex flex-column align-items-center justify-content-center never-too-late">
+    <p class="big">Ніколи не пізно вчитися!</p>
+    <p class="small">Будь-яка успішна кар'єра починається з доброї освіти</p>
+    <a href="#" class="read-more">
+      Детальніше...
+    </a>
+</div>
+{% endblock%}
+
+
+{% block welcome%}
+<div class="welcome d-flex flex-column align-items-center justify-content-center">
+    <p class="big-black">Вітаємо</p>
+    <div class="underline"></div>
+    <div class="d-inline-flex justify-content-center">
+      <p class="welcome-text-block">
+          Значення хорошої освіти не можна недооцінювати. З дитинства і до дорослого віку кожен з нас намагається відкрити щось нове, оволодіти глибшими знаннями різних предметів і просто пізнати світ краще. Виходячи з рівня своєї освіти, ви можете отримати повагу та визнання в суспільстві.
+      </p>
+      <p class="welcome-text-block">
+          Ви отримаєте свою майбутню роботу і підніметеся на кар'єрні сходи в залежності від знань, що ви отримаєте в школі, коледжі, університеті тощо. Ви швидко навчаєтеся? Як швидко ви можете вирішувати різні завдання та знайти найкраще рішення проблеми? Це лише деякі фактори, що визначають ваш професійний успіх.
+      </p>
+       <p class="welcome-text-block">
+          Як відомо, такі люди успішні не тільки в професійній сфері. Вони також можуть мати довші та щасливіші шлюби. Який висновок можна зробити з усього сказаного вище? Виховання - вигідно і модно.
+      </p>
+    </div>
+    <a href="#" class="read-more">
+      Детальніше...
+    </a>
+</div>
+{% endblock%}
+
+{% block last_6_news%}
+<!-- LAST NEWS BEGIN -->
+
+      <div class="last-6-news d-flex flex-column align-items-center justify-content-center">
+         <p class="big-white">Останні новини</p>
+        <div class="underline"></div>
+        <div class="d-flex flex-md-row flex-column news-space">
+
+        {%include "large_modal.html"%}
+          <div class="d-flex flex-column column">
+            <div class="card">
+                {% if post1.main_image %}
+                  <a href="blog:{{post1.get_absolute_url}}" data-toggle="modal" data-target="#lg_modal-1">
+                      <img src="/main_images/{{ post1.main_image }}" class="card-img-top" alt="...">
+                  </a>
+                {% endif %}
+              <div class="card-body">
+                <a href="blog:{{post1.get_absolute_url}}"  class="card-title" data-toggle="modal" data-target="#lg_modal-1">{{ post1.title }}</a>
+
+                <div class="underline"></div>
+                <p class="date"><i>{{post1.pub_date}}</i></p>
+                <p class="card-text">{{post1.short_description | safe}}</p>
+              </div>
+            </div>
+            <div class="card">
+                {% if post2.main_image %}
+                  <a href="blog:{{post2.get_absolute_url}}" data-toggle="modal" data-target="#lg_modal-2">
+                      <img src="/main_images/{{ post2.main_image }}" class="card-img-top" alt="...">
+                  </a>
+                {% endif %}
+              <div class="card-body">
+                <a href="blog:{{post2.get_absolute_url}}"  class="card-title" data-toggle="modal" data-target="#lg_modal-2">{{ post2.title }}</a>
+                <div class="underline"></div>
+                <p class="date"><i>{{post2.pub_date}}</i></p>
+                <p class="card-text">{{ post2.short_description | safe}}</p>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="d-flex flex-column column">
+            <div class="card">
+                {% if post3.main_image %}
+                  <a href="blog:{{post3.get_absolute_url}}" data-toggle="modal" data-target="#lg_modal-3">
+                      <img src="/main_images/{{ post3.main_image }}" class="card-img-top" alt="...">
+                  </a>
+                {% endif %}
+              <div class="card-body">
+                <a href="blog:{{post3.get_absolute_url}}"  class="card-title" data-toggle="modal" data-target="#lg_modal-3">{{ post3.title }}</a>
+                <div class="underline"></div>
+                <p class="date"><i>{{post3.pub_date}}</i></p>
+                <p class="card-text">{{post3.short_description | safe}}</p>
+              </div>
+            </div>
+            <div class="card">
+                {% if post4.main_image %}
+                  <a href="blog:{{post4.get_absolute_url}}" data-toggle="modal" data-target="#lg_modal-4">
+                      <img src="/main_images/{{ post4.main_image }}" class="card-img-top" alt="...">
+                  </a>
+                {% endif %}
+                <div class="card-body">
+                <a href="blog:{{post4.get_absolute_url}}"  class="card-title" data-toggle="modal" data-target="#lg_modal-4">{{ post4.title }}</a>
+                <div class="underline"></div>
+                <p class="date"><i>{{post4.pub_date}}</i></p>
+                <p class="card-text">{{post4.short_description | safe}}</p>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="d-flex flex-column column">
+            <div class="card">
+                {% if post5.main_image %}
+                  <a href="blog:{{post5.get_absolute_url}}" data-toggle="modal" data-target="#lg_modal-5">
+                      <img src="/main_images/{{ post5.main_image }}" class="card-img-top" alt="...">
+                  </a>
+                {% endif %}
+                <div class="card-body">
+                <a href="blog:{{post5.get_absolute_url}}"  class="card-title" data-toggle="modal" data-target="#lg_modal-5">{{ post5.title }}</a>
+                <div class="underline"></div>
+                <p class="date"><i>{{post5.pub_date}}</i></p>
+                <p class="card-text">{{post5.short_description | safe }}</p>
+              </div>
+            </div>
+            <div class="card">
+                {% if post6.main_image %}
+                  <a href="blog:{{post6.get_absolute_url}}" data-toggle="modal" data-target="#lg_modal-6">
+                      <img src="/main_images/{{ post6.main_image }}" class="card-img-top" alt="...">
+                  </a>
+                {% endif %}
+                <div class="card-body">
+                <a href="blog:{{post6.get_absolute_url}}"  class="card-title" data-toggle="modal" data-target="#lg_modal-6">{{ post6.title }}</a>
+                <div class="underline"></div>
+                <p class="date"><i>{{post6.pub_date}}</i></p>
+                <p class="card-text">{{post6.short_description | safe }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+{% endblock%}
+
+{% block news_letter%}
+  <div class="news-letter d-flex flex-column align-items-center justify-content-center">
+    <p class="big-white">Підписатись на новини</p>
+    <div class="underline"></div>
+
+    <form action="/newsletter" class="d-flex flex-column newsletter-form w-100 justify-content-center align-items-center">
+      <input type="email" name="news-letter-input" class="email-input" placeholder="Введіть Ваш Email *" autocomplete="on" required>
+      <input type="submit" value="Підписатись">
+    </form>
+  </div>
+{% endblock%}
+
+
+{% block contuct_us%}
+  <div class="contact-us d-flex flex-column align-items-center justify-content-center">
+    <p class="big-black">Зв'яжіться з нами</p>
+    <div class="underline"></div>
+    <div class="d-md-inline-flex d-md-flex justify-content-around w-100">
+      <div class="d-flex flex-column address align-items-center ml-auto">
+        <img src="{% static 'img/home_icon.png' %}" height="50px" width="57px">
+        <p>
+          79035, м. Львів, вул. Пимоненка, 17<br>79071, м. Львів, вул. Пулюя, 30 (бічна вул. Наукова)<br>81750, Львівська область, м. Ходорів, вул. Грушевського, 3
+        </p>
+      </div>
+      <div class="d-flex flex-column phone align-items-center">
+        <img src="{% static 'img/phone_icon.png' %}" height="56px" width="34px">
+        <p>
+            270-20-50<br>264-66-61, 265-93-67<br>(3239) 5-32-32, 5-34-61
+        </p>
+      </div>
+       <div class="d-flex flex-column mail align-items-center mr-auto">
+        <img src="{% static 'img/mail_icon.png' %}" height="46px" width="56px">
+        <p>
+            techcol@litech.net
+        </p>
+      </div>
+    </div>
+  </div>
+{% endblock%}
+
+
+{% block big_map%}
+<div class="" style="background-color: white; height: 100vh;">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d82385.01269992828!2d23.998466479203426!3d49.81367219999999!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473ae81e9d9e3711%3A0x92715be97cba1512!2z0LLRg9C70LjRhtGPINCc0LjQutC-0LvQuCDQn9C40LzQvtC90LXQvdC60LAsIDE3LCDQm9GM0LLRltCyLCDQm9GM0LLRltCy0YHRjNC60LAg0L7QsdC70LDRgdGC0YwsIDc5MDAw!5e0!3m2!1suk!2sua!4v1520293352994" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+{% endblock%}
+
+
+{% block home_scripts%}
+<!-- Optional JavaScript -->
+<script type="text/javascript">
+  document.getElementById("home").classList.add("active-page");
+
+  window.onscroll = function() {scrollFunction()};
+  function scrollFunction() {
+   if (document.body.scrollTop > 205 || document.documentElement.scrollTop > 205) {
+      document.getElementById("menu").style.background="#262626a6";
+      document.getElementById("menu").style.opacity="1";
+      document.getElementById("menu").style.transition="0.8s";
+    } else {
+      document.getElementById("menu").style.background="transparent";
+      document.getElementById("menu").style.opacity="1";
+      document.getElementById("menu").style.transition="0.4s";
+    }
+  }
+
+</script>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+{% endblock%}

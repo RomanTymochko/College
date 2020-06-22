@@ -1,0 +1,58 @@
+{%block menu%}
+{% load static %}
+<nav class="navbar navbar-expand-md d-flex flex-row flex-nowrap mobile-header">
+  <img src="{% static 'img/logo.png' %}" class="college-logo">
+  <a class="long-college-name m-0 " href="{% url 'home' %}"> ВСП - Технічний коледж<br>Національного університету<br>“Львівська політехніка”</a>
+  <!-- <a class="short-college-name m-0" href="#">ВСП - ТКНУ"ЛП"</a> -->
+  <a class="short-college-name m-0" href="{% url 'home' %}">Технічний коледж</a>
+  <button class="navbar-toggler align-self-end align-items-center burger" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <img src="{% static 'img/menu2.png' %}" width="32px" height="32px">
+  </button>
+</nav>
+
+<div class="menu-line"></div>
+
+<nav class="navbar sticky-top navbar-expand-md w-100 p-0" id="menu">
+  <div class="collapse navbar-collapse w-100 justify-content-center mobile-menu-main" id="navbarSupportedContent">
+    <ul class="navbar-nav w-100 justify-content-center">
+      <li class="nav-item menu-item" id="home">
+        <a class="nav-link" href="{% url 'home' %}">ГОЛОВНА</a>
+      </li>
+      <li class="nav-item menu-item dropdown" id="about">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          ПРО НАС
+        </a>
+        <div class="dropdown-menu mobile-menu-sub deck-menu-sub" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="{% url 'pages:administration' %}">АДМІНІСТРАЦІЯ</a>
+          <a class="dropdown-item" href="{% url 'pages:departments' %}">ВІДДІЛЕННЯ</a>
+          <a class="dropdown-item" href="{% url 'pages:pubinfo' %}">ДОСТУП ДО ПУБЛІЧНОЇ ІНФОРМАЦІЇ</a>
+          <a class="dropdown-item" href="{% url 'pages:internactiv' %}">МІЖНАРОДНА СПІВПРАЦЯ</a>
+        </div>
+      </li>
+
+      <li class="nav-item menu-item" id="news">
+        <a class="nav-link" href="{% url 'blog:news' %}">НОВИНИ</a>
+      </li>
+
+      <li class="nav-item menu-item" id="abiturient">
+        <a class="nav-link" href="{% url 'blog:abiturientu' %}">АБІТУРІЄНТУ</a>
+      </li>
+
+      <li class="nav-item menu-item" id="student">
+        <a class="nav-link" href="{% url 'blog:studentu' %}">СТУДЕНТУ</a>
+      </li>
+
+      <li class="nav-item menu-item" id="gallery">
+        <a class="nav-link" href="{% url 'gallery:gallery' %}">ГАЛЕРЕЯ</a>
+      </li>
+
+      <li class="nav-item menu-item d-flex flex-row align-items-center justify-content-between" id="contacts">
+        <a class="nav-link" href="{% url 'pages:contacts' %}">КОНТАКТИ</a>
+        <button class="navbar-toggler align-items-center burger" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="padding-right: 0!important">
+        <img src="{% static 'img/x.png' %}" width="24px" height="24px">
+      </button>
+      </li>
+    </ul>
+  </div>
+</nav>
+{%endblock menu%}

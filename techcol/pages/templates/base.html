@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% block page_title%}
+            <title>techcol</title>
+        {% endblock%}
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style2.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/simplelightbox.min.css' %}">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="page" style="background-image: url({% static 'img/back.png' %}); background-attachment: fixed; background-repeat: no-repeat;">
+
+        {%include "title_and_menu.html"%}
+
+<!--INDEX BEGIN-->
+        {% block never_too_late%}
+        {% endblock%}
+
+        {% block welcome%}
+        {% endblock%}
+
+        {% block last_6_news%}
+        {% endblock%}
+
+        {% block news_letter%}
+        {% endblock%}
+
+        {% block contuct_us%}
+        {% endblock%}
+
+        {% block big_map%}
+        {% endblock%}
+<!--INDEX END-->
+
+<!--NEWS BEGIN-->
+        {% block news_posts%}
+        {% endblock%}
+<!--NEWS END-->
+
+<!--ABITURIENTU BEGIN-->
+        {% block abiturientu_posts%}
+        {% endblock%}
+<!--ABITURIENTU END-->
+
+<!--STUDENTU BEGIN-->
+        {% block studentu_posts%}
+        {% endblock%}
+<!--STUDENTU END-->
+
+<!--ADMINISTRATION BEGIN-->
+        {% block am%}
+        {% endblock%}
+<!--ADMINISTRATION END-->
+
+<!--DEPARTMENTS BEGIN-->
+        {% block dp%}
+        {% endblock%}
+<!--DEPARTMENTS END-->
+
+<!--PUBLIC INFORMATION BEGIN-->
+        {% block pi%}
+        {% endblock%}
+<!--PUBLIC INFORMATION END-->
+
+<!--INTERNATIONAL ACTIVITY BEGIN-->
+        {% block ia%}
+        {% endblock%}
+<!--INTERNATIONAL ACTIVITY END-->
+
+<!--GALLERY BEGIN-->
+        {% block gallery_items%}
+        {% endblock%}
+<!--GALLERY END-->
+
+<!--CONTACTS BEGIN-->
+        {% block contuct_form%}
+        {% endblock%}
+
+        {% block small_map%}
+        {% endblock%}
+
+        {% block contact_form%}
+        {% endblock%}
+<!--CONTACTS END-->
+
+
+        {%include "footer.html"%}
+        </div>
+
+        {% block home_scripts%}
+        {% endblock%}
+
+        {% block contacts_scripts%}
+        {% endblock%}
+
+        {% block abiturientu_scripts%}
+        {% endblock%}
+
+        {% block studentu_scripts%}
+        {% endblock%}
+
+        {% block administration_scripts%}
+        {% endblock%}
+
+        {% block departments_scripts%}
+        {% endblock%}
+
+        {% block gallery_scripts%}
+        {% endblock%}
+
+        {% block intrenactiv_scripts%}
+        {% endblock%}
+
+        {% block news_scripts%}
+        {% endblock%}
+
+        {% block pubinfo_scripts%}
+        {% endblock%}
+    <script src="{% static 'js/jquery.bootstrap.modal.forms.min.js' %}"></script>
+    </body>
+</html>

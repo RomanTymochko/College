@@ -1,0 +1,31 @@
+$block-white: #ffffff;
+$block-black: #1a1c1c;
+$block-red: #ff4757;
+
+
+$button-white: #ffffff;
+$button-black: #3a3c3c;
+$button-red: #ff4757;
+
+
+$text-white: #ffffff;
+$text-black: #2a2d2d;
+$text-red: #ff4757;
+$text-grey: #7a7d7d;
+$text-dark-grey: #333333;
+
+$border-grey: #c9c8ca;
+
+@font-face {
+font-family: "Comfortaa";
+src: url("../fonts/Comfortaa-Bold.ttf");
+}
+
+@font-face {
+font-family: "Roboto";
+src: url("../fonts/Roboto-Regular.ttf");
+}
+
+
+$Comfortaa: "Comfortaa";
+$Roboto:"Roboto";
